@@ -12,7 +12,8 @@ This repository includes demos that for my study process.
 6-)Functions and Function Types
 7-)Datatimes Module
 8-)Os Module (Operating System)
-9-)Re Mdule (Regular Expression)
+9-)Re Module (Regular Expression)
 10-)Json Module
 11-)Web Scraping with Beautiful Soup Module (Bs4)
 12-)Selenium Module
+13-)Numpy Module
