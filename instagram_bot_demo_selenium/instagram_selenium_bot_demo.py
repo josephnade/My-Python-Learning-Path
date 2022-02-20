@@ -34,12 +34,11 @@ class Instagram():
                                   '//*[@id="react-root"]/section/main/div/header/section/ul/li[2]/a/div').click()
         dialog = self.browser.find_element(By.CSS_SELECTOR, "div[role=dialog] ul")
         action = webdriver.ActionChains(self.browser)
-        print(total_count)
         while True:
             dialog.click()
             action.key_down(Keys.SPACE).key_up(Keys.SPACE).perform()
             counter = len(dialog.find_elements(By.CSS_SELECTOR, 'li'))
-            time.sleep(0.5)
+            time.sleep(1)
             if counter == total_count - 1 or counter == total_count:
                 break
             else:
@@ -50,14 +49,15 @@ class Instagram():
         with open("followers.txt","w",encoding="utf-8") as file:
             for i in self.followers:
                 file.write(i+"\n")
+                print(i)
     def followSomeone(self):
         following = input("Who do you want to follow:")
         self.browser.get("https://www.instagram.com/"+following)
         self.browser.implicitly_wait(3)
-        follow_button = self.browser.find_element(By.TAG_NAME,'button')
-        if follow_button.text == "Follow":
+        follow_button = self.browser.find_element(By.XPATH,'.//button[@type="button"]')
+        if follow_button.text == "Follow" or follow_button.text == "Follow Back":
             follow_button.click()
-            time.sleep()
+            time.sleep(1)
         else:
             print(f"You already followed {following}")
     def unfollowSomeone(self):
@@ -67,5 +67,17 @@ class Instagram():
         unfollowing_button.click()
         self.browser.find_element(By.XPATH,'//button[text()="Unfollow"]').click()
 instagram = Instagram(username, password)
-instagram.login()
-instagram.unfollowSomeone()
+while True:
+    choose = input("[0]You must login first\n[1]Get Followers\n[2]Follow Someone\n[3]Unfollow Someone\n[4]Exit\nPlease enter your choose=")
+    if choose == "4":
+        break
+    elif choose == "0":
+        instagram.login()
+    elif choose == "1":
+        instagram.getFollowers()
+    elif choose == "2":
+        instagram.followSomeone()
+    elif choose == "3":
+        instagram.unfollowSomeone()
+    else:
+        print("Wrong input.Try again!!!")
