@@ -1,9 +1,9 @@
 # Python-Projects
 
 
-This repository includes demos that for my study process. \n
+This repository includes demos that for my study process. <br/>
 
-***I learnt these topics for now.*** \n
+***I learnt these topics for now.*** <br/>
 1-)Python Basics (Conditional statement,loop,variables etc.)
 2-)Object Oriented Program
 3-)Modules and Errors
