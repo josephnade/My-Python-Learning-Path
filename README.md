@@ -17,3 +17,4 @@ This repository includes demos that for my study process. <br/>
 11-)Web Scraping with Beautiful Soup Module (Bs4)<br/>
 12-)Selenium Module<br/>
 13-)Numpy Module<br/>
+14-)Pandas Module<br/>
