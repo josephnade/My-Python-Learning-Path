@@ -18,3 +18,4 @@ This repository includes demos that for my study process. <br/>
 12-)Selenium Module<br/>
 13-)Numpy Module<br/>
 14-)Pandas Module<br/>
+15-)MySql Connection and CRUD </br>
