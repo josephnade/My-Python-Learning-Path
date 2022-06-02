@@ -20,3 +20,5 @@ This repository includes demos that for my study process. <br/>
 14-)Pandas Module<br/>
 15-)MySql Connection, CRUD and using Join methods </br>
 16-)Sqlite3 </br>
+17-)PyQt5 <br>
+18-)Django <br>
