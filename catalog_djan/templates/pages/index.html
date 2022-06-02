@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{%  block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img class="card-img" src="{% static 'img/1.jpeg' %}" alt="">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <div class="card-title">
+                                High Life
+                            </div>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae quaerat nostrum vel dicta ipsum? Consequatur.</p>
+                            <p class="card-text">
+                                <small class="text-muted">3 days ago</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img class="card-img" src="{% static 'img/1.jpeg' %}" alt="">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <div class="card-title">
+                                My Life be Like
+                            </div>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae quaerat nostrum vel dicta ipsum? Consequatur.</p>
+                            <p class="card-text">
+                                <small class="text-muted">3 days ago</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
